@@ -1,4 +1,4 @@
-### Menu
+### Menu["{{ site.github.repository_url }}/edit/{{site.git_branch | escape}}/_includes/sidebar.html"]
 
 - Home["/"]
 - example-page["/example-page"]
