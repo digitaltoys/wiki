@@ -1,7 +1,7 @@
 Menu (<a href="{{ site.github.repository_url }}/edit/{{site.git_branch | escape}}/_includes/sidebar">Edit</a>):
 
-- Home["/"]
-- example-page["/example-page"]
+- [Home]("/")
+- [example-page]("/example-page")
 
 
 <ul>
