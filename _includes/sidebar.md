@@ -1,9 +1,8 @@
-### Menu["{{ site.github.repository_url }}/edit/{{site.git_branch | escape}}/_includes/sidebar.html"]
+Menu (<a href="{{ site.github.repository_url }}/edit/{{site.git_branch | escape}}/_includes/sidebar.html">Edit</a>):
 
 - Home["/"]
 - example-page["/example-page"]
 
-Menu (<a href="{{ site.github.repository_url }}/edit/{{site.git_branch | escape}}/_includes/sidebar.html">Edit</a>):
 
 <ul>
   <li><a href="{{ '/' | relative_url }}">Home</a></li>
