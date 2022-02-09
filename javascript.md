@@ -1,4 +1,4 @@
-# array
+array
 
 ### 깊은 복사
 var arr1 = [1, 2, 3, 4];  
