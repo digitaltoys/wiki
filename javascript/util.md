@@ -64,3 +64,24 @@ inputImage.addEventListener("change", e => {
     readImage(e.target)
 })
 ```
+
+### 화면 캡쳐후 저장
+```javascript
+      function capture() {
+        html2canvas(document.querySelector("#capture")).then((canvas) => {
+          // document.body.appendChild(canvas);
+          var myImage = canvas.toDataURL();
+          downloadURI(myImage, "저장이미지이름.png");
+        });
+      }
+      function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+      }
+```
+```html
+
+```
