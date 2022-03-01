@@ -85,3 +85,9 @@ inputImage.addEventListener("change", e => {
 ```html
 
 ```
+
+### query to json
+```javastring
+   var searchParams = new URLSearchParams(this.$route.hash.slice(1));   // 첫부분에 "#" 제거
+   this.query = Object.fromEntries(searchParams);
+```
