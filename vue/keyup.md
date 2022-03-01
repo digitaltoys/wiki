@@ -30,3 +30,15 @@ vue
 .alt  
 .shift  
 .meta  
+
+### "Invalid Host header" error
+
+```javascript
+// vue.config.js
+module.exports = {
+    // options...
+    devServer: {
+        disableHostCheck: true
+    }
+}
+```
