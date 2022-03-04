@@ -27,3 +27,12 @@ var cars = [{ make: 'audi', model: 'r8', year: '2012' }, { make: 'audi', model: 
 
 console.log(result);
 ```
+
+### filter
+```javascript
+const ages = [32, 33, 16, 40];
+
+const result = ages.filter((age) {
+  return age >= 18;
+});
+```
