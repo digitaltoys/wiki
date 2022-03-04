@@ -36,3 +36,8 @@ const result = ages.filter((age) {
   return age >= 18;
 });
 ```
+
+### 배열의 교집합 구하기
+```javascript
+const filteredArray = array1.filter(value => array2.includes(value));
+```
