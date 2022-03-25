@@ -1,4 +1,4 @@
-## npmbox 설치
+### npmbox 설치
 온라인 PC에 npmbox 설치
 인터넷 연결 PC에서 수행
 
@@ -17,7 +17,7 @@ npm set strict-ssl false
 
  
 
-오프라인 PC에 npmbox 설치
+### 오프라인 PC에 npmbox 설치
 온라인 PC에서 npmbox 패키지를 다운받아 박스로 생성한다
 
 npmbox npmbox
@@ -51,7 +51,7 @@ npm install --global --cache ./.npmbox.cache --optional --cache-min 99999999999 
 npm install --global --cache .\.npmbox.cache --optional --cache-min 99999999999 --shrinkwrap false npmbox
  
 
-원하는 패키지 설치
+### 원하는 패키지 설치
 온라인 PC에서 원하는 패키지를 다운받아 박스로 생성한다
 
 npmbox somepackage
