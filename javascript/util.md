@@ -91,3 +91,26 @@ inputImage.addEventListener("change", e => {
    var searchParams = new URLSearchParams(this.$route.hash.slice(1));   // 첫부분에 "#" 제거
    this.query = Object.fromEntries(searchParams);
 ```
+
+### url에 query 파싱
+```js
+var qs = getQueryStringObject();
+var x = qs.x; // 925641
+var y = qs.y; // 1666020
+var l = qs.level; // 10
+```
+```js
+function getQueryStringObject() {
+    var a = window.location.search.substr(1).split('&');
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=', 2);
+        if (p.length == 1)
+            b[p[0]] = "";
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+}
+```
