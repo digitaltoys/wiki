@@ -114,3 +114,25 @@ function getQueryStringObject() {
     return b;
 }
 ```
+
+### dynamic form으로 api 호출
+```js
+        submitForm: function (verb, url, data, target) {
+            let form = document.createElement("form");
+            form.action = url;
+            form.method = verb;
+            // form.target = target || "_self";
+            if (data) {
+                for (let key in data) {
+                    let input = document.createElement("textarea");
+                    input.name = key;
+                    input.value = typeof data[key] === "object" ? JSON.stringify(data[key]) : data[key];
+                    form.appendChild(input);
+                }
+            }
+            form.style.display = "none";
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        },
+```
