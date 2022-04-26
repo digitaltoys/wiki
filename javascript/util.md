@@ -136,3 +136,40 @@ function getQueryStringObject() {
             document.body.removeChild(form);
         },
 ```
+
+### 일시 배열을 moment로 변환
+```js
+            arr2moment: function (arr) {
+                let arr2 = arr.slice(0,6);
+                arr2[1]--;
+                return this.$moment(arr2)
+            },
+```
+### 몇초전, 몇분전, 몇일전, 몇주전 구하기
+```js
+            setTimePass: function (regdtm) {
+                // let moment=require('moment')
+                // console.log('moment', moment())
+                let strToDate = regdtm[0] + "/" + regdtm[1] + "/" + regdtm[2] + " " + regdtm[3] + ":" + regdtm[4] + ":" + regdtm[5];
+                let date = this.$moment(strToDate, "YYYY/MM/DD HH:mm:ss");
+                // let date = this.$moment(strToDate).format("YYYY/MM/DD HH:mm:ss");
+                let current = this.$moment();
+                let diffTimes = {
+                    year: current.diff(date, "years"),
+                    month: current.diff(date, "months"),
+                    week: current.diff(date, "weeks"),
+                    day: current.diff(date, "days"),
+                    hour: current.diff(date, "hours"),
+                    minute: current.diff(date, "minutes"),
+                    second: current.diff(date, "seconds"),
+                };
+                if (diffTimes.year > 0) return diffTimes.year + "년 전";
+                if (diffTimes.month > 0) return diffTimes.month + "달 전";
+                if (diffTimes.week > 0) return diffTimes.week + "주 전";
+                if (diffTimes.day > 0) return diffTimes.day + "일 전";
+                if (diffTimes.hour > 0) return diffTimes.hour + "시간 전";
+                if (diffTimes.minute > 0) return diffTimes.minute + "분 전";
+                if (diffTimes.second > 0) return diffTimes.second + "초 전";
+                if (diffTimes.second == 0) return "방금 전";
+            },
+```
