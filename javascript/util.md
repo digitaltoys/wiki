@@ -173,3 +173,17 @@ function getQueryStringObject() {
                 if (diffTimes.second == 0) return "방금 전";
             },
 ```
+
+### 하위 객체에 값 쓰기
+```js
+// optWrite(a, 'b.c.e', 2) 
+let optWrite = (obj, str, val) => {
+    chain = str.split('.');
+    let key = chain.shift();
+    if (!key) return;
+
+    (chain?.length > 0)? obj[key] = obj[key] || {}: obj[key] = val;// obj[key] = chain.shift();
+    console.log(chain?.length, key, JSON.stringify(obj))
+    optWrite(obj[key], chain.join('.'), val);
+}
+```
