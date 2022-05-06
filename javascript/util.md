@@ -187,3 +187,17 @@ let optWrite = (obj, str, val) => {
     optWrite(obj[key], chain.join('.'), val);
 }
 ```
+
+### axios 에서 '[]' 식오류
+```js
+        const options = {
+            method: "GET",
+            // url: "/tmap/pois",
+            url:"https://apis.openapi.sk.com/tmap/pois",
+            params: data.params,
+            paramsSerializer: function (params) {
+                return qs.stringify(params, {arrayFormat: 'brackets'})
+            },
+            data: {},
+        };
+```
