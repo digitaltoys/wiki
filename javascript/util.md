@@ -188,7 +188,7 @@ let optWrite = (obj, str, val) => {
 }
 ```
 
-### axios 에서 '[]' 식오류
+### axios 에서 params에 '[]' 인식 오류
 ```js
         const options = {
             method: "GET",
