@@ -13,6 +13,6 @@ https://wonpaper.tistory.com/437
 ```java
       mWebView = (WebView) findViewById(R.id.webView);
       mWebView.getSettings().setJavaScriptEnabled(true);
-    	String userAgent = mWebView.getSettings().getUserAgentString();
-    	mWebView.getSettings().setUserAgentString(userAgent+" APP_WISHRROM_Android");
+      String userAgent = mWebView.getSettings().getUserAgentString();
+      mWebView.getSettings().setUserAgentString(userAgent+" APP_WISHRROM_Android");
 ```
