@@ -215,5 +215,5 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes/inputmode
 **url** - 보통 / 키를 누르기 편한 곳에 배치하며, 세션 히스토리 접근 기능 등을 추가하기도 합니다. 일반적인 경우, 반드시 URL을 필요로 하는 입력 칸에는 inputmode 대신 <input type="url"> (en-US)을 사용해야 합니다.  
 
 ```html
-<input type="number" pattern="[0-9]*" inputmode="numeric" />
+<input type="text" pattern="[0-9]*" inputmode="numeric" />
 ```
