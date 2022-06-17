@@ -29,6 +29,11 @@
             },
 ```
 
+### 차량번호판 체크 정규식
+```js
+this.carNumber = this.carNumber.replace(/^(\d{2,3}[가-힣]{1}\d{4})([\s\S]*)$/, "$1");
+let match = /^(\d{2,3}[가나다라마바사아자거너더러머버서어저고노도로모보소오조구누두루무부수우주배허하호국합육해공]{1}\d{4})$/.exec(this.carNumber);
+```
 ### 이미지 미리보기
 ```html
 <div class="image-container">
