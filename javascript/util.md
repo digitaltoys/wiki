@@ -283,3 +283,16 @@ html2canvas(e.target.parentElement).then(function(canvas) {
     }
 ```
 https://stackoverflow.com/questions/72181133/how-to-download-blob-url-in-webview
+
+### 클로저(closer)를 우회하는 방법
+```js
+test = function () {
+  for (i=0; i < 3; i++) {
+    (function(x) {
+      setTimeout(function() {
+        console.log(x);
+      }, 1000*x);
+    })(i);
+  }
+}
+```
