@@ -222,3 +222,16 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes/inputmode
 ```html
 <input type="text" pattern="[0-9]*" inputmode="numeric" />
 ```
+
+### 브라우저 테그 영역을 파일로 캡쳐하여 저장하기
+```html
+<a id="target" style="display: none"></a>
+
+html2canvas(e.target.parentElement).then(function(canvas) {
+  var el = document.getElementById("target");
+  el.href = canvas.toDataURL("image/jpeg");
+  el.download = '파일명.jpg';
+  el.click();
+});
+```
+출처: https://sub0709.tistory.com/48 [쓸데없는 코딩하기:티스토리]
