@@ -282,3 +282,4 @@ html2canvas(e.target.parentElement).then(function(canvas) {
         Toast.makeText(context, "FILE DOWNLOADED!", Toast.LENGTH_SHORT).show();
     }
 ```
+https://stackoverflow.com/questions/72181133/how-to-download-blob-url-in-webview
