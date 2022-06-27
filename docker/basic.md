@@ -54,3 +54,6 @@ FROM이 2번 존재한다. 앞에서는 vault를 빌드하는 환경이고 두 �
 첫 FROM에는 FROM golang:1.8.3 AS build처럼 별칭을 지정했다. 이는 나중에 사용하기 위함이다.  
 최종 이미지를 만들기 위해서 FROM debian:jessie을 사용했다.  
 COPY --from=build /go/src/github.com/hashicorp/vault/bin/vault /bin/처럼 앞에서 build로 지정한 환경에서 파일을 가져와서 최종 이미지에 파일을 추가한다.  
+
+### gitlab ci 배포
+https://lovemewithoutall.github.io/it/deploy-example-by-gitlab-ci/
