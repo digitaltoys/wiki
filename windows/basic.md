@@ -3,3 +3,8 @@
 Get-NetAdater
 new-netswitchteam -Name "Wi-Fi Team" -TeamMembers "이더넷", "Wi-Fi 3"
 ```
+
+### 멀티부팅 설치 USB 툴
+ventoy
+https://www.ventoy.net/en/download.html
+https://kimsungjin.tistory.com/398
