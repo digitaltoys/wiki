@@ -5,6 +5,7 @@ vue
 <a @click.stop="doThis"></a>
 <form @submit.prevent="onSubmit"></form>
 <input @keyup.enter="submit">
+<input @keydown.enter.prevent="onLogin" />
 <input @keyup.page-down="onPageDown">
 <input @keyup.alt.67="clear">
 ```
