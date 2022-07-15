@@ -1,2 +1,2 @@
 ## Nextjs
- <a href="/react/nextjs">Nextjs</a>
+ <a href="/wiki/react/nextjs">Nextjs</a>
