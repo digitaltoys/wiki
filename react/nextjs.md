@@ -24,6 +24,9 @@ const App = (props: AppProps) => {
 export default App;
 ```
 
+```
+yarn add -D babel-plugin-styled-components
+```
 .babelrc
 ```json
 {
