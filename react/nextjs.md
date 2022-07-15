@@ -9,23 +9,59 @@ yarn add @emotion/react @emotion/styled @mui/icons-material @mui/material @mui/s
 // _app.tsx
 import type { AppProps } from "next/app";
 import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from "styles/global-styles";
+
+const theme = {
+  primary: 'green',
+}
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props;
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <CssBaseline />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 };
 
 export default App;
 ```
 
-```
+```cmd
 yarn add -D babel-plugin-styled-components
+```
+```tsx
+// styles/global-styles.ts
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    letter-spacing: -1px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .txt-c {
+    text-align: center;
+  }
+  .txt-r {
+    text-align: right;
+  }
+  .txt-l {
+    text-align: left;
+  }
+  p {
+    margin: 0;
+  }
+`;
 ```
 .babelrc
 ```json
