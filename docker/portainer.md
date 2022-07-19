@@ -3,6 +3,9 @@
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 
+![image](https://user-images.githubusercontent.com/8512711/179707100-7554eb27-9eb2-4307-873f-312f109824d5.png)
+
+
 ```docker
 version: "2"
 services:
