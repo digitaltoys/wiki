@@ -4,6 +4,11 @@ Get-NetAdater
 new-netswitchteam -Name "Wi-Fi Team" -TeamMembers "이더넷", "Wi-Fi 3"
 ```
 
+### Teamming 삭제
+```powershell
+Remove-NetSwitchTeam -name "Wi-Fi Team"
+```
+
 ### 멀티부팅 설치 USB 툴
 ventoy  
 https://www.ventoy.net/en/download.html  
